@@ -54,7 +54,7 @@ pub async fn publish_data(state_diff: Vec<U256>) {
     log::info!("blob: {:?}", blob);
     println!("blob: {:?}", blob);
 
-    let submitted_height = client.blob_submit(&[blob.clone()]).await.unwrap();
+    let submitted_height = client.blob_submit(&[blob.clone()]).await;
 
     // let submitted_height = blob_submit(&client, &[blob.clone()]).await.unwrap();
     log::info!("Submitted height deterministic: {:?}", submitted_height); // Print submitted_height
